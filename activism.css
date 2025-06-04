@@ -1,0 +1,181 @@
+/* Activism CSS Stylesheet */
+
+body {
+   
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b0ccd8;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+.nav-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 1rem; /* Add spacing between links */
+    list-style: none; /* Remove default list styling if using <ul> or <ol> */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: #4CAF50; /* Add background color on hover */
+    border-radius: 5px; /* Optional: round the edges */
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+p {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    background: #3a4123;
+    color: white;
+    border: 2px solid #c4dac5; /* Add a border */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background: #45a049;
+    border-color: #2E7D32; /* Change border color on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+section {
+    background-color: #f4f4f4; /* Light background for the section */
+    padding: 2rem; /* Add padding around the section */
+    display: flex; /* Enable Flexbox */
+    justify-content: space-around; /* Space out the cards evenly */
+    align-items: flex-start; /* Align cards to the top */
+    flex-direction: row; /* Arrange cards in a row */
+    gap: 1rem; /* Add spacing between cards */
+    flex-wrap: wrap; /* Allow wrapping if there are too many cards */
+}
+
+section .fact-grid {
+    display: flex; /* Enable Flexbox for the grid */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center the cards in the section */
+    gap: 1rem; /* Add spacing between cards */
+}
+
+
+section .fact-card {
+    background: white; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: calc(33.333% - 1rem); /* Three cards per row with spacing */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+section .fact-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+section h2 {
+    margin-bottom: 1rem; /* Add spacing below the heading */
+    color: #4CAF50; /* Use a consistent color for headings */
+}
+
+section p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+}
+
+section ul {
+    padding-left: 1.5rem; /* Indent list items */
+    margin: 0;
+}
+
+section ul li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+}
+#learn {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center-align text */
+    padding: 2rem; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+#learn .spot-fake-news {
+    display: flex; /* Enable Flexbox for the tips */
+    flex-wrap: wrap; /* Allow wrapping if there are too many tips */
+    justify-content: center; /* Center the tips horizontally */
+    gap: 1rem; /* Add spacing between tips */
+    margin-top: 1rem; /* Add spacing above the tips */
+}
+
+#learn .tip {
+    display: flex; /* Enable Flexbox for each tip */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align icon and text */
+    background-color: #ffffff; /* White background for the tip */
+    padding: 1rem; /* Add padding inside the tip */
+    border: 1px solid #ddd; /* Add a light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 200px; /* Set a fixed width for consistency */
+    text-align: center; /* Center-align text */
+}
+#learn .spot-fake-news :hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    transform: translateY(-2px); /* Slightly lift the tip on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
