@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+
+
+    <script>
+        const button = document.querySelector('button');
+        function random(number){
+            return Math.floor(Math.random() * number) + 1;
+        }
+        button.addEventListener('click', () => {
+            const randomNumber = random(100);
+            alert(`Random number is: ${randomNumber}`);
+        });
+
+        function mouseOverHandler() {
+            button.style.backgroundColor = 'lightblue';
+        }
+
+        function mouseOutHandler() {
+            button.style.backgroundColor = 'red';
+        }
+
+        button.addEventListener('mouseover', mouseOverHandler);
+        button.addEventListener('mouseout', mouseOutHandler);
+    </script>
+</body>
+</html>
