@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .outside-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            }
+            .inside-btn{
+            background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="outside-btn">Click Me</button>
+        <p>Nothing new <button class="inside-btn">Here</button></p>
+
+        <script>
+            const product2 = {
+                name: 'Shirt',
+                'delivery-time': '1 day',
+                rating: {
+                    stars: 4.5,
+                    count: 87
+                },
+
+                fun: function function1(){
+                    console.log('functon inside object')
+                }
+            };
+            console.log(product2['name'])
+
+            console.log(JSON.stringify(product2));
+        </script>
+    </body>
+</html>
