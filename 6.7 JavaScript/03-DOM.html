@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM PROJECTS</title>
+
+  <style>
+    .js-subscribe-button{
+      background-color: black;
+      color: white;
+      height: 25px;
+      border-radius: 20px;
+
+    }
+    .calculate-btn{
+      background-color: green;
+      border: none;
+      height: 25px;
+    }
+  </style>
 </head>
 
 
@@ -12,9 +27,11 @@
   <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
 
   <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
   <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown(event);">
 
-  <button onclick="calculateTotal();">Calculate</button>
+  <button class="calculate-btn" onclick="calculateTotal();">Calculate</button>
 
   <p class="js-total-cost"></p>
 
