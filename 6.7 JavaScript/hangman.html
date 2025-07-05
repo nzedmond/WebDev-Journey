@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="hang-man">
+    <img src="hangman-pictures/Screenshot 2025-07-04 at 11.49.45 PM.png" alt="hangman">
+  </div>
+  <div><button onclick="playGame()">Play Game</button></div>
+
+  <div class="blank-word">
+    <p></p>
+  </div>
+  <div class="user-area">
+    <input class="user-guess" type="text" placeholder="Guess a letter">
+    <button onclick="checkResponse()">Submit</button>
+    <button onclick="newGame()">New Game</button>
+  </div>
+
+  <script>
+    words = ['next', 'sneeze', 'breath', 'guard', 'nebulous', 'fascinated', 'join', 'dad', 'nutritious', 'cautious', 'society', 'pink', 'plate', 'rotten', 'own', 'weigh', 'hellish', 'numerous', 'part', 'wild', 'thunder', 'pen', 'grin', 'pause', 'tranquil', 'quiet', 'flash', 'deafening', 'share', 'expert', 'squash', 'mend', 'automatic', 'team', 'science'];
+    function checkResponse() {
+      //get the user's guess and check if it exists in the given word
+      word = getRandom();
+      let userGuess = document.querySelector('.user-guess');
+      //word = word.toLowerCase();
+      userGuess = userGuess.value.toLowerCase();
+      console.log(userGuess);
+
+      if(word.includes(userGuess)){
+        // replace the bar with the letter in the exact position in the given word.
+        console.log(userGuess);
+        //get the bars
+        const bars = document.querySelector('.blank-word');
+        let barsText = bars.innerText;
+        //get the first index of the guessed letter in word
+        let firstOccurance = word.indexOf('userGuess');
+        let barsArray = barsText.split(" ");
+        barsArray.splice(firstOccurance, 1, userGuess);
+
+        bars.innerHTML = barsArray.join(" ");
+        console.log(word);
+
+      }
+      
+    }
+
+    function newGame(){
+      //generates a new random word and update the bars.
+      //reset the hangman gif to the initial state
+      if(confirm("Are you sure you wanna play a new game?")){
+        const innitialGIF = document.querySelector('.hang-man');
+        innitialGIF.src = "hangman-pictures/Screenshot 2025-07-04 at 11.49.45 PM.png";
+        playGame();
+      }
+    }
+    function getRandom(){
+      //generates a random word
+      maxNum = words.length - 1;
+      index = Math.floor(Math.random() * maxNum);
+      return words[index];
+    }
+
+    function playGame(){
+      //picks a random word
+      //generates the bars
+      wordAtIndex = getRandom();
+      numBars = wordAtIndex.length;
+
+      let bars = document.querySelector('.blank-word');
+      barString = '';
+      for(let i=1; i<=numBars; i++){
+        barString += ' -'
+      }
+      bars.innerHTML = barString;
+
+
+    }
+  </script>
+</body>
+</html>
