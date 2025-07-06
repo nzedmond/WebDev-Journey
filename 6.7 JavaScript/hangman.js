@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="hang-man">
-    <img src="hangman-pictures/Screenshot 2025-07-04 at 11.49.45 PM.png" alt="hangman">
-  </div>
-  <div><button class="play-game-btn" onclick="playGame()">Play Game</button></div>
-
-  <div class="blank-word">
-    <p></p>
-  </div>
-  <div class="user-area">
-    <input class="user-guess" type="text" placeholder="Guess a letter">
-    <button onclick="checkResponse()">Submit</button>
-    <button onclick="newGame()">New Game</button>
-  </div>
-
-  <script>
-    words = ['next', 'sneeze', 'breath', 'guard', 'nebulous', 'fascinated', 'join', 'dad', 'nutritious', 'cautious', 'society', 'pink', 'plate', 'rotten', 'own', 'weigh', 'hellish', 'numerous', 'part', 'wild', 'thunder', 'pen', 'grin', 'pause', 'tranquil', 'quiet', 'flash', 'deafening', 'share', 'expert', 'squash', 'mend', 'automatic', 'team', 'science'];
+window.onload = function(){
+  //assign all event handlers here
+  const playGamebtn = document.querySelector('.play-game-btn');
+  playGamebtn.event = playGame;
+}
+(function(){
+ //wrap the whole script inside this anymous function to avoid global variable conflicts with other script files.
+  words = ['next', 'sneeze', 'breath', 'guard', 'nebulous', 'fascinated', 'join', 'dad', 'nutritious', 'cautious', 'society', 'pink', 'plate', 'rotten', 'own', 'weigh', 'hellish', 'numerous', 'part', 'wild', 'thunder', 'pen', 'grin', 'pause', 'tranquil', 'quiet', 'flash', 'deafening', 'share', 'expert', 'squash', 'mend', 'automatic', 'team', 'science'];
     let currentWord = getRandom(); // get a random word
 
     function checkResponse() {
@@ -88,6 +72,7 @@
 
 
     }
-  </script>
-</body>
-</html>
+
+
+
+})();
