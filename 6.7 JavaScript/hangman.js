@@ -3,7 +3,6 @@ window.onload = function(){
   const playGamebtn = document.querySelector('.play-game-btn');
   playGamebtn.event = playGame;
 }
-(function(){
  //wrap the whole script inside this anymous function to avoid global variable conflicts with other script files.
   words = ['next', 'sneeze', 'breath', 'guard', 'nebulous', 'fascinated', 'join', 'dad', 'nutritious', 'cautious', 'society', 'pink', 'plate', 'rotten', 'own', 'weigh', 'hellish', 'numerous', 'part', 'wild', 'thunder', 'pen', 'grin', 'pause', 'tranquil', 'quiet', 'flash', 'deafening', 'share', 'expert', 'squash', 'mend', 'automatic', 'team', 'science'];
     let currentWord = getRandom(); // get a random word
@@ -72,7 +71,3 @@ window.onload = function(){
 
 
     }
-
-
-
-})();
