@@ -26,6 +26,7 @@ function getRandomColor(){
 function createSquare(){
     const squareArea = document.querySelector('#squarearea');
     const square = document.createElement("div");
+    square.onclick = squareClick;
     square.className = "square";
     square.style.left = parseInt(Math.random()*650) + "px";
     square.style.top = parseInt(Math.random()*250) + "px";
@@ -39,4 +40,16 @@ function changeSquareColors(){
     squares.forEach((square) => {
         square.style.backgroundColor = getRandomColor();
     })
+}
+let maxZ = 1000;
+
+function squareClick(){
+    let oldZ = parseInt(this.style.zIndex);
+    if(oldZ === maxZ){
+        this.parentNode.removeChild(this);
+    }else{
+        maxZ++;
+        this.style.zIndex = maxZ;
+    }
+
 }
