@@ -1,6 +1,42 @@
-const clickMeBtn = document.querySelector('.outside-btn');
-clickMeBtn.onclick = changeBtnColor;
+window.onload = function(){
+    const addSquareBtn = document.querySelector('#add');
+    addSquareBtn.onclick = createSquare;
+    const changeColorBtn = document.querySelector('#colors');
+    changeColorBtn.onclick = changeSquareColors;
 
-function changeBtnColor(){
-    this.className = 'clickedbtn';
+
+
+    const squareArea = document.querySelector('#squarearea');
+    const squareCount = parseInt(Math.random()*21) + 30;
+
+    for(let i=0; i<squareCount; i++){
+        createSquare();
+    }
+};
+
+function getRandomColor(){
+    const letters = "0123456789abcdef";
+    let result = "#";
+    for(let i=0; i<6; i++){
+        result += letters.charAt(parseInt(Math.random() * letters.length));
+    }
+    return result;
+}
+
+function createSquare(){
+    const squareArea = document.querySelector('#squarearea');
+    const square = document.createElement("div");
+    square.className = "square";
+    square.style.left = parseInt(Math.random()*650) + "px";
+    square.style.top = parseInt(Math.random()*250) + "px";
+    square.style.backgroundColor = getRandomColor();
+    squareArea.appendChild(square);
+}
+
+function changeSquareColors(){
+    const squares = document.querySelectorAll('#squarearea div');
+    console.log(squares);
+    squares.forEach((square) => {
+        square.style.backgroundColor = getRandomColor();
+    })
 }
