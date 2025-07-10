@@ -3,106 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Layouts 1</title>
+    <title>Document</title>
 
-    <style type="text/css">
-        *{
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
+    <style>
+        body{
+            font-family: Arial;
+            padding: 10px;
+            background: whitesmoke;
         }
-        #div1{
-            width: 100%;
-            height: 50px;
-            background-color: lightgray;
-            padding-left: 2%;
-            padding-right: 2%;
-        }
-        #logo-div{
-            width: 100%;
-            min-height: 50px;
-            background-color: lightgray;
-            padding-left: 2%;
-            line-height: 50px;
-            margin-bottom: 10px;
-        }
-        #nav-div{
-            width: 100%;
-            min-height: 30px;
-            background-color: lightgray;
+        .header{
+            background-color: gray;
+            padding: 30px;
             text-align: center;
-            line-height: 30px;
-            margin-bottom: 10px;
+            font-size: 2em;
+            color: white;
         }
-        #banner-div{
-            width: 100%;
-            min-height: 100px;
-            background-color: lightgray;
-            text-align: center;
-            line-height: 100px;
-            margin-bottom: 10px;
+        .navbar{
+            overflow: auto;
+            background-color: dimgrey;
         }
-        #main-div{
-            width: 100%;
-            margin-bottom: 10px;
-
-        }
-        #sidebar-div{
-            width: 20%;
-            min-height: 400px;
-            background-color: lightgray;
+        .navbutton{
             float: left;
-            text-align: center;
-            line-height: 400px;
-        }
-        #bodyarea-div{
-            width: 75%;
-            min-height: 400px;
-            background-color: lightgray;
-            float: right;
-            text-align: center;
-            line-height: 400px;
-        }
-        .clear-fix::after{
-            content: "";
             display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbutton:hover{
+            background-color: lightgray;
+            color: black;
+        }
+        .row{
             clear: both;
         }
-        #footer-div{
-            width: 100%;
-            min-height: 50px;
-            background-color: lightgray;
+        .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+        .rightcolumn{
+            float: right;
+            width: 25%;
+        }
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+        .footer{
+            background-color: #777;
+            padding: 10px;
             text-align: center;
-            line-height: 50px;
+            color: white;
+            clear: right;
         }
-        #wrapper-div{
-            width: 80%;
-            margin: auto;
-        }
-
     </style>
+
 </head>
-
 <body>
-    <div id="wrapper-div">
-        <div id="logo-div">
-            LOGO
-        </div>
-
-        <div id="nav-div">Navigation</div>
-        
-        <div id="banner-div">Header/Banner</div>
-
-        <div id="main-div" class="clear-fix">
-            <div id="sidebar-div">Side bar</div>
-            <div id="bodyarea-div"> Body Area</div>
-        </div>
-
-        <div id="footer-div">FOOTER</div>
-
+    <div class="header"><p>Header</p></div>
+    <div class="navbar">
+        <a href="#" class="navbutton">Link 1</a>
+        <a href="#" class="navbutton">Link 2</a>
+        <a href="#" class="navbutton">Link 3</a>
     </div>
-    
-</body>
 
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>Title Description</h5>
+                <p>Some random nosensical text</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Card 1</h2>
+                <p>Some text here</p>
+            </div>
+            <div class="card">
+                <h2>Card 2</h2>
+                <p>Some other text here</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright info goes here</p>
+    </div>
+</body>
 </html>
