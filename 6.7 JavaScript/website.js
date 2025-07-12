@@ -12,10 +12,10 @@ window.onload = function(){
     for(let i=0; i<squareCount; i++){
         createSquare();
     }
-    const squares = document.querySelectorAll('.squarearea div');
-    squares.forEach((square)=>{
-        square.onclick = squareClick;
-    })
+    // const squares = document.querySelectorAll('.squarearea div');
+    // squares.forEach((square)=>{
+    //     square.onclick = squareClick;
+    // })
 };
 
 function getRandomColor(){
@@ -30,12 +30,13 @@ function getRandomColor(){
 function createSquare(){
     const squareArea = document.querySelector('#squarearea');
     const square = document.createElement("div");
-    // square.onclick = squareClick;
+    
     square.className = "square";
     square.style.left = parseInt(Math.random()*650) + "px";
     square.style.top = parseInt(Math.random()*250) + "px";
     square.style.backgroundColor = getRandomColor();
     squareArea.appendChild(square);
+    square.onclick = squareClick;
 }
 
 function changeSquareColors(){
