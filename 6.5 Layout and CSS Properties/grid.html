@@ -1,106 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            margin: 0px;
-        }
-        .d1{background: rgb(164, 164, 220);}
-        .d2{background: burlywood;}
-        .d3{background: yellowgreen;}
-        .d4{background: magenta;}
-        .d5{background: khaki;}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Webpage with Sections</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container{
-            font-size: 40px;
-            width: 100%;
-            background: lightblue;
-            display: grid;
-            grid-template-columns: 100px 100px 100px;
-            grid-template-rows: 50px 50px;
-            grid-column-gap: 20px;
-            grid-row-gap: 5px;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
 
-        .box1{
-            border: 5px solid;
-            width: 250px;
-            height: 250px;
-            font-size: 22px;
-            background: greenyellow;
-            padding: 20px;
-            position: relative;
-            top: 50px;
-            left: 50px;
-        }
+    /* Navigation */
+    nav {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .box2{
-            border: 5px red solid;
-            width: 50px;
-            height: 50px;
-            font-size: 22px;
-            background: khaki;
-            position: absolute;
-            top: 100px;
-            left: 100px;
-        }
-        
-    </style>
+    nav h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4CAF50;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: rgb(198, 231, 231);
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    section p {
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* For visual spacing */
+    .spacer {
+      height: 50px;
+    }
+
+    /* Responsive Nav (Optional Enhancement) */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="d1">1</div>
-        <div class="d2">2</div>
-        <div class="d3">3</div>
-        <div class="d4">4</div>
-        <div class="d5">5</div>
-    </div>
 
-    <h1>This is page 2</h1>
+  <nav>
+    <h1>My Website</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my simple website. I'm learning how to create modern webpages with HTML and CSS!</p>
+  </section>
 
-    <div class="box1"> 
-        <div class="box2">
-        </div>  
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a student and a web development enthusiast. I enjoy learning new technologies, especially in the field of software and creative media.</p>
+  </section>
 
+  <section id="services">
+    <h2>Services</h2>
+    <p>I offer basic web design, video editing, and content creation services. I aim to make clean and effective designs for personal and academic use.</p>
+  </section>
 
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Here are a few of my recent projects and works. I’m continuously learning and improving my skills every day.</p>
+  </section>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Necessitatibus fugit hic pariatur laborum ad ullam laudantium 
-    cum quam quod qui rerum optio culpa, nam consequatur adipisci
-    reprehenderit nisi alias quasi.</p>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:you@example.com">you@example.com</a> or follow me on social media!</p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Website | Designed with ❤️</p>
+  </footer>
 
 </body>
 </html>

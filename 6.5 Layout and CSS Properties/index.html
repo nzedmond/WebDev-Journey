@@ -4,58 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-        body {
-            width: 90%;
-            max-width: 900px;
-            margin: 0 auto;
-            font: 
-            0.9em/1.2 Arial,
-            Helvetica,
-            sans-serif;
+        *{
+            text-decoration: none;
         }
+        .navbar{
+            background-color: aquamarine;
+            font-family: sans-serif;
+            padding: 15px 15px;
 
-        .box{
-            float: left;
-            margin: 15px;
-            width: 150px;
-            height: 100px;
-            border-radius: 5px;
-            background-color: rgb(207 232 220);
-            padding: 1em;
         }
-        .special{
-            background-color: rgb(148 225 172);
-            padding: 10px;
-            color: purple;
+        .navdiv{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .wrapper{
-            background-color: rgb(148 225 172);
-            padding: 10px;
-            color: purple;
-            display: flow-root;
+        .logo{
+            font-size: 35px;
+            font-weight: 600px;
         }
-
+        li{
+            list-style: none;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Float example</h1>
-
-    <div class="wrapper">
-        <div class="box">Float1</div>
-        <div class="box">Float2</div>
-        <div class="box">Float3</div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi maiores reprehenderit illo, eum quas et. Quae unde ad modi nobis debitis porro corporis doloribus alias, maiores, tempora autem, dicta explicabo.</p>
-    </div>
-
-    <p class="cleared">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque similique saepe eum voluptas illo itaque ipsum officia expedita error, exercitationem aliquam doloribus delectus magni, ab possimus. Nemo vero esse ratione. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, quibusdam beatae rerum adipisci vel dolore tempora ut tempore ex explicabo. Cumque repellat quae, molestiae distinctio consequuntur amet dolore obcaecati iure?
-    </p>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fuga, veniam neque cumque maiores vero natus sit voluptatem rerum voluptates ducimus nostrum impedit saepe iste! Voluptatibus quaerat iusto reiciendis odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut illo fuga dolores natus fugiat. Similique labore architecto nam repellendus nesciunt! Repudiandae explicabo qui optio pariatur dolorem iste obcaecati esse fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit fugit at ipsa repudiandae nesciunt minus laudantium recusandae? Magnam accusamus vitae saepe officiis sed debitis facere nam cumque eius sunt. Quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique labore corrupti eum asperiores iusto sapiente suscipit nesciunt odit accusamus ipsam. Voluptatum nobis tenetur quibusdam neque quam necessitatibus minus dolorum enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, delectus eligendi nihil, placeat voluptatem quas fugit culpa repellat a libero aut optio iusto tempore at unde consequuntur, dolorem accusantium laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempora, voluptatibus voluptatem inventore placeat esse mollitia quo quod nihil neque voluptate eos quidem debitis nam dolor libero sapiente perferendis maxime.
-    </p>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">Edmond</div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <button>SignIn</button>
+                <button>SignUp</button>
+            </ul>
+        </div>
+    </nav>
 </body>
 </html>
