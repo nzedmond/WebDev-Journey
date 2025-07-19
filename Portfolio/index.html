@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
   <title>Giraed Pixels Portfolio</title>
 </head>
 <body>
+  <!-------HEADER: LOGO AND NAVIGATION BAR-->
   <section class="header">
     <nav>
       <a href="index.html"><img src="images/logo-removebg-preview.png" alt=""></a>
-      <div class="navlinks">
+      <div class="navlinks" id="navLinks">
+        <i class="fa fa-window-close"></i>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">My Story</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="navli"><a href="#">Home</a></li>
+          <li class="navli"><a href="#">Gallery</a></li>
+          <li class="navli"><a href="#">My Story</a></li>
+          <li class="navli"><a href="#">Contact</a></li>
+        <!----SOCIAL MEDIA LINKS-->
           <li>
             <div class="social-media">
               <ul>
@@ -27,7 +34,57 @@
           </li>
         </ul>
       </div>
+      <i class="fa fa-bars"></i>
     </nav>
+    <!---------INTRO TEXT------------->
+    <div class="intro-text">
+      <h1>Giraed Pixels</h1>
+      <p>Photography</br>Portfolio</p>
+    </div>
   </section>
+
+  <!-------GALLERY SECTION------->
+  <section class="gallery">
+    <h1>Recent Works</h1>
+    <div class="gallery-row">
+      <div class="gallery-col">
+        <img src="images/IMG_0122.jpg" alt="">
+        <div class="layer">
+          <h3>Portraits</h3>
+        </div>
+      </div>
+      <div class="gallery-col">
+        <img src="images/IMG_0129.jpg" alt="">
+        <div class="layer">
+          <h3>Places</h3>
+        </div>
+      </div>
+      <div class="gallery-col">
+        <img src="images/IMG_0128.jpg" alt="">
+        <div class="layer">
+          <h3>Fashion</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------MY STORY SECTION------------->
+  <section class="about-me">
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>A portfolio showcasing my photography skills in a wide range of niches. This is where I share my passion for capturing moments and creating visual stories. I strive to bring a unique perspective to each project, whether it's a portrait, landscape, or event photography. Through my lens, I aim to showcase the beauty of the world and the essence of every subject.</p>
+    </div>
+
+    <div class="about-img">
+      <img src="images/IMG_0121.jpg" alt="">
+    </div>
+  </section>
+
+  
+
+
+
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>

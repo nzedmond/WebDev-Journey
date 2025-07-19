@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 .header{
   min-height: 100vh;
@@ -33,4 +34,166 @@ nav img{
   color: white;
   text-decoration: none;
   font-size: 20px;
+  font-weight: 150;
 }
+.navlinks ul li.navli::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.navlinks ul li.navli:hover::after{
+  width: 100%;
+}
+
+.intro-text{
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  color: white;
+  /* margin-left: 30px;
+  margin-top: 200px; */
+}
+
+.intro-text h1{
+  margin-bottom: 20px;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 500;
+}
+.intro-text p{
+  letter-spacing: 12px;
+  font-size: 150%;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+nav .fa{
+  display: none;
+}
+@media(max-width: 700px){
+  .intro-text{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  /* .intro-text h1{
+    font-size: 25px;
+  }
+  .intro-text p{
+    font-size: 60%;
+  } */
+  .navlinks{
+    position: absolute;
+    background: rgba(52, 45, 45, 0.5);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    text-transform: uppercase;
+    transition: 1s;
+  }
+  nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .navlinks ul{
+    padding: 30px;
+  }
+  .gallery-row{
+    flex-direction: column;
+  }
+}
+
+/*--------GALLERY SECTION-------*/
+
+.gallery{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.gallery-row{
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+}
+.gallery-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-col img{
+  width: 100%;
+  height: 100%;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+.layer:hover{
+  background:  rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+  width: 100%;
+  font-weight: 300;
+  color: white;
+  font-size: 25px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s;
+}
+.layer:hover h3{
+  bottom: 49%;
+  opacity: 1;
+}
+.about-me{
+  
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.about-img{
+  margin-top: 6%;
+}
+.about-img img{
+  width: 100%;
+
+}
+.about-text{
+  margin-right: 70px;
+  margin-left: 20px;
+  padding: 5px;
+}
+.about-text h1{
+  margin-bottom: 30px;
+}
+.about-me p{
+  line-height: 26px;
+}
+
