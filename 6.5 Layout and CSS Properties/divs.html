@@ -1,95 +1,68 @@
+
+<!----
+The purpose of HTML is to add meaning and structure to the content. It is not intented to provide instructions for how the content should look.
+
+When marking up your document, choose elements semantically i.e. in a way that most accurately describes the content's meaning.
+
+If the purpose of grouping elements is simply to provide a hook for styling, use the generic div element instead of the HTML 5 semantic elements.
+
+If the content is self-contained and could appear outside the current context, it is best marked up as an article.
+ex:
+
+<article>
+    <h1>Get to Know Edmond</h1>
+    <section>
+        <h2>History of Edmond</h2>
+        <p>.....</p>
+    </section>
+
+    <section>
+        <h2>Edmond Today</h2>
+        <p>......</p>
+    </section>
+</article>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>black goose blog</title>
 
     <style>
-        body{
-            font-family: Arial;
-            padding: 10px;
-            background: whitesmoke;
-        }
-        .header{
-            background-color: gray;
-            padding: 30px;
-            text-align: center;
-            font-size: 2em;
-            color: white;
-        }
-        .navbar{
-            overflow: auto;
-            background-color: dimgrey;
-        }
-        .navbutton{
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .navbutton:hover{
-            background-color: lightgray;
-            color: black;
-        }
-        .row{
-            clear: both;
-        }
-        .leftcolumn{
-            float: left;
-            width: 75%;
-        }
-        .rightcolumn{
-            float: right;
-            width: 25%;
-        }
-        .card{
-            background-color: white;
-            padding: 20px;
-            margin: 20px;
-        }
-        .footer{
-            background-color: #777;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            clear: right;
-        }
     </style>
-
 </head>
 <body>
-    <div class="header"><p>Header</p></div>
-    <div class="navbar">
-        <a href="#" class="navbutton">Link 1</a>
-        <a href="#" class="navbutton">Link 2</a>
-        <a href="#" class="navbutton">Link 3</a>
-    </div>
+    <article>
+        <header>
+            <h1>The Black Goose Blog</h1>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Menu</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title Description</h5>
-                <p>Some random nosensical text</p>
-            </div>
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>Card 1</h2>
-                <p>Some text here</p>
-            </div>
-            <div class="card">
-                <h2>Card 2</h2>
-                <p>Some other text here</p>
-            </div>
-        </div>
-    </div>
+        <section>
+            <hgroup>
+                <h2>Summer Menu Items</h2>
+                <p>posted by BGB, June 15, 2013</p>
+            </hgroup>
 
-    <div class="footer">
-        <p>Copyright info goes here</p>
-    </div>
+            <p>
+                Our chef has been putting together the perfect menu for the summer months. Stop by to try these appetizers and main courses while the days are still long.
+            </p>
+        </section>
+
+        <section>
+            <h3>Appetizers</h3>
+
+        </section>
+    </article>
+
+
 </body>
 </html>
