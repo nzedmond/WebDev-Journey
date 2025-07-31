@@ -45,12 +45,12 @@ body {
     color: #ff6f61;
 }
 
-.nav-social .social-icon {
+/* .nav-social .social-icon {
     width: 30px;
     height: auto;
     margin-left: 15px;
     transition: transform 0.3s;
-}
+} */
 
 .nav-social .social-icon:hover {
     transform: scale(1.2);
