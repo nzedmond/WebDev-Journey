@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     color: #333;
 }
+
 /* Navigation Bar */
 .navbar {
     background-color: #fff;
@@ -45,13 +46,18 @@ body {
     color: #4CAF50;
 }
 
+.nav-links li a.active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
 .hamburger {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section (Home Page) */
 .hero {
     background: linear-gradient(135deg, #4CAF50, #2196F3);
     color: white;
@@ -77,13 +83,14 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    display: inline-block;
 }
 
 .cta-button:hover {
     background-color: #f0f0f0;
 }
 
-/* Features Section */
+/* Features Section (Home Page) */
 .features {
     padding: 50px 20px;
     max-width: 1200px;
@@ -110,6 +117,155 @@ body {
     color: #2196F3;
 }
 
+/* Shop Section (Shop Page) */
+.shop {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.shop h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.shop p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-placeholder {
+    background-color: #f0f0f0;
+    height: 150px;
+    line-height: 150px;
+    color: #666;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    color: #2196F3;
+}
+
+/* Sell Section (Sell Page) */
+.sell {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sell h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sell p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sell-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.sell-form input,
+.sell-form select,
+.sell-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.sell-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.sell-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Contact Section (Contact Page) */
+.contact {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 /* Footer */
 .footer {
     background-color: #333;
@@ -126,15 +282,42 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero h1,
+    .shop h1,
+    .sell h1,
+    .contact h1 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .hero p,
+    .shop p,
+    .sell p,
+    .contact p {
         font-size: 1rem;
     }
 
-    .features {
+    .features,
+    .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
