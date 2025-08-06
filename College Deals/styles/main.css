@@ -5,9 +5,21 @@
     font-family: 'Arial', sans-serif;
 }
 
+html, body {
+    height: 100%; /* Ensure the body takes full viewport height */
+}
+
 body {
     line-height: 1.6;
     color: #333;
+    display: flex;
+    flex-direction: column; /* Use flexbox to structure the page */
+    min-height: 100vh; /* Ensure body is at least viewport height */
+}
+
+/* Main content wrapper to push footer down */
+main {
+    flex: 1 0 auto; /* Grow to fill available space, no shrink */
 }
 
 /* Navigation Bar */
@@ -272,7 +284,8 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    width: 100%;
 }
 
 .footer a {
