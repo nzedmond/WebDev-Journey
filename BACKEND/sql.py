@@ -12,3 +12,14 @@ cur.execute("CREATE TABLE movie(title, year, score)") # create a database table,
 res = cur.execute("SELECT name FROM sqlite_master")
 print(res.fetchone()) # check if the table was created. Returns None if it wasn't, otherwise returns a tuple containing table name.
 
+cur.execute("""
+            INSERT INTO movie VALUES
+                ('Project Hail Marry', 2025, 9.7),
+                ('House of the Dragons', 2026, 9.9)
+            """)
+# the insert statement opens a transaction which needs to be committed before changes are saved in the database.
+
+con.commit()
+
+scores = cur.execute("SELECT score FROM movie")
+print(scores.fetchall())

@@ -14,3 +14,10 @@
     > This set of resources is known as the REST API's resource model.
 
 
+# PYTHON VIRTUAL ENVIRONMENT
+
+When a Python interpreter is running from a virtual environment, sys.prefix and sys.exec_prefix point to the directories of the virtual environment, whereas sys.base_prefix and sys.base_exec_prefix point to those of the base Python used to create the environment. It is sufficient to check sys.prefix != sys.base_prefix to determine if the current interpreter is running from a virtual environment.
+
+## DAY 3, exercise2.py
+
+ > GET endpoints don't take bodies - they take query/path parameters.
