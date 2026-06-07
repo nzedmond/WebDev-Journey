@@ -7,7 +7,7 @@ con = sqlite3.connect("tutorial.db") # returns a Connection object that represen
 
 cur = con.cursor() # use a database cursor to execute SQL statements and fetch results from SQL queries.
 
-cur.execute("CREATE TABLE movie(title, year, score)") # create a database table, movie, with columns for title, year, and score.
+# cur.execute("CREATE TABLE movie(title, year, score)") # create a database table, movie, with columns for title, year, and score.
 
 res = cur.execute("SELECT name FROM sqlite_master")
 print(res.fetchone()) # check if the table was created. Returns None if it wasn't, otherwise returns a tuple containing table name.
@@ -23,3 +23,25 @@ con.commit()
 
 scores = cur.execute("SELECT score FROM movie")
 print(scores.fetchall())
+
+data = [
+    ("The Last of Us", 2003, 7.6),
+    ("Sinners", 2025, 8.7),
+    ("The Lincoln Lawyer", 2002, 6.7),
+]
+cur.executemany("INSERT INTO movie VALUES(?, ?, ?)", data)
+con.commit()
+
+# ? placeholders are used to bind data to teh query. Always use placeholders instead of string formatting to bind python values to SQL statements to avoid SQL injection attacks.
+
+for row in cur.execute("SELECT year, title FROM movie ORDER BY year"):
+    print(row)
+    
+con.close()
+new_con = sqlite3.connect("tutorial.db")
+new_cur = new_con.cursor()
+res = new_cur.execute("SELECT title, year FROM movie ORDER BY score DESC")
+title, year = res.fetchone()
+print(f'The highest scoring movie is {title}, released in {year}')
+
+new_con.close()
